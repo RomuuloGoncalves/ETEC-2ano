@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let nome = []
+        let dataNascimento = []
+        let email = []
+        var idade = []
+        var ano = 2022
+
+        var posiçao = 1
+
+        for (let i = 1; i <= 10; i++) {
+            nome[i] = prompt("Informe o nome do " + posiçao + " Usuario")
+            email[i] = prompt("Informe o e-mail do " + posiçao + " Usuario")
+            dataNascimento[i] = String(prompt("Informe a data de nascimento do " + posiçao + " Usuario (separado por \"/\""))
+
+
+            dia = dataNascimento[i].split("/")
+
+            // calcular idade 
+
+
+            idade[i] = 2022 - parseInt(dia[2])
+
+            posiçao++;
+        }
+
+        posiçao = 1
+        for (let i = 1; i <= 10; i++) {
+
+            document.write("<h2>" + posiçao + " Usuario" + "<br> </h2>")
+            document.write(" nome: " + nome[i] + "<br> ")
+            document.write(" Data de Nascimento : " + dataNascimento[i] + "<br> ")
+            document.write(" E-mail: " + email[i] + "<br> ")
+            document.write(" Idade: " + idade[i] + "<br> ")
+            document.write("------------------------------------------------------------------- " + "<br> </h2>")
+
+            posiçao++;
+
+        }
+        document.write("<table>")
+        for (let i = 1; i <= 10; i++) {
+            document.write("<tr>")
+
+            for (let i = 1; i <= 10; i++) {
+                document.write("<h2>" + posiçao + " Usuario" + "<br> </h2>")
+                document.write(" nome: " + nome[i] + "<br> ")
+                document.write(" Data de Nascimento : " + dataNascimento[i] + "<br> ")
+                document.write(" E-mail: " + email[i] + "<br> ")
+                document.write(" Idade: " + idade[i] + "<br> ")
+                document.write("------------------------------------------------------------------- " + "<br> </h2>")
+
+                posiçao++;
+            }
+            document.write("<tr>")
+
+        }
+        document.write("<table>")
+
+
+    </script>
+</body>
+
+</html>

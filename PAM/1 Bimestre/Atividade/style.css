@@ -1,0 +1,166 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+.container {
+	width: 100vw;
+	height: 100vh;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+header,footer{
+	background-color: #ccc;
+}
+
+h1 {
+	width: 100vw;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+footer {
+	width: 100vw;
+	height: max-content;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: auto;
+	flex-direction: column;
+	text-align: center;
+}
+#Creditos{
+	border-bottom: 0.1px solid #b9b5b5;
+}
+span {
+	font-size: 20px;
+}
+
+.grupo {
+	min-width: 315px;
+	display: flex;
+	flex-direction: column;
+	justify-content: baseline;
+	align-items: center;
+	border: 1px solid #000;
+	border-radius: 5px;
+}
+
+label {
+	font-size: 24px;
+}
+
+input {
+	border-radius: 6px;
+	height: 23px;
+	box-shadow: 2px 2px;
+	padding-left: 4px;
+	width: 100%;
+}
+
+.botoes {
+	display: flex;
+	justify-content: space-between;
+}
+
+#btn-resetar {
+	margin-left: 2px;
+}
+#btn-calcular {
+	margin-right: 2px;
+}
+
+button {
+	box-sizing: border-box;
+	margin-top: 10px;
+	padding: 8px 10px;
+	font-size: 16px;
+	border-radius: 30px;
+	background-color: rgb(170, 159, 159);
+	font-weight: 600;
+	margin-bottom: 15px;
+}
+
+h3 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+button:hover {
+	transition: all 0.3s;
+	cursor: pointer;
+	background-color: rgb(75, 71, 71);
+	color: white;
+}
+
+input:hover {
+	transition: all 0.3s;
+	background-color: #ccccccbe;
+	box-shadow: 2px 2px #161516fb;
+}
+
+.entrada {
+	margin-top: 15px;
+}
+
+#tabela {
+	display: none;
+}
+
+#tabela.mostrar {
+	display: block;
+	margin-top: 25px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	max-width: 100%;
+}
+
+button:hover {
+	margin-left: 6px;
+	margin-right: 6px;
+	transition: 0.5s;
+	transform: scale(1.1);
+}
+#btn-resetar:hover {
+	margin-left: 4px;
+}
+#btn-calcular:hover {
+	margin-right: 4px;
+}
+
+input:hover,
+span:hover {
+	transition: 0.5s;
+	transform: scale(1.01);
+}
+
+footer span:hover > .emoji{
+    transition: all 0.5s;
+    font-size: 25px;
+}
+
+td {
+	padding: 2px 3px;
+	width: 95px;
+	font-size: 18px;
+	text-align: center;
+}
+th {
+	font-size: 28px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	background-color: rgb(77, 77, 224);
+}
+
+main {
+	margin: auto auto;
+}

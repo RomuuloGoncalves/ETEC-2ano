@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Calcular IMC</title>
+		<link rel="stylesheet" href="./style.css" />
+		<style>
+			td,
+			th,
+			thead {
+				border: 2px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+            <header>
+                <h1>Calculadora de IMC</h1>
+            </header>
+
+            <main>
+                <h3>Fórmula: <em>IMC = peso / (altura * altura)</em></h3>
+
+			<div class="grupo">
+				<div class="entrada">
+					<label for="altura">Informe sua altura (m)</label> <br>
+					<input type="number" name="altura" id="altura" />
+				</div>
+				<div class="entrada">
+					<label for="peso">Informe seu peso (kg)</label> <br>
+					<input type="number" name="peso" id="peso" />
+				</div>
+
+                <div class="botoes">
+
+                <button  id="btn-calcular"onclick="calcularIMC(); verificarClassificacao(); toggle()">
+					Calcular
+				</button>
+
+				<button id="btn-resetar" onclick="resetarCampos()">
+					Resetar
+				</button>
+            </div>
+			</div>
+
+			<table id="tabela">
+				<tr>
+					<th colspan="3">Seus dados</th>
+				</tr>
+				<tr>
+					<td>IMC</td>
+					<td>Classificação</td>
+					<td>Grau de Obesidade</td>
+				</tr>
+				<tr>
+					<td id="IMC"></td>
+					<td id="Classificacao"></td>
+					<td id="Grau"></td>
+				</tr>
+			</table>
+        </main>
+            
+            <footer>
+                <span id="Creditos"> <span class="emoji">&#x1F340;</span> Desenvolvido por: Rômulo da Silva Gonçalves <span class="emoji">&#x1F340;</span></span>
+				<span>Professor: Giovanni Guarnieri</span>
+            </footer>
+		</div>
+
+
+		<script src="./script.js"></script>
+	</body>
+</html>

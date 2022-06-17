@@ -1,0 +1,209 @@
+:root{
+    --botaoColor:rgb(87, 87, 204);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    /* color: white; */
+    color: black;
+}
+
+body {
+    max-width: 100%;
+    min-height: 100vh;
+    /* max-width: auto; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #8bc6ec;
+    background-image: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%);
+}
+.cont {
+    filter: blur(5px);
+    width: 100vw;
+    position: absolute;
+    z-index: -3;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+img {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: -1;
+}
+
+.glass {
+    padding: 40px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 85vw;
+    height: max-content;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    
+}
+
+.container {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 18px;
+    min-width: 30%;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.container,
+scroll-container {
+    flex: 0 0 100px;
+    border-radius: 15px;
+    padding: 10px;
+}
+#active {
+    display: none;
+}
+
+p {
+    font-size: 42px;
+    width: 60%;
+    text-align: center;
+}
+
+#active.ativar {
+    display: block;
+}
+
+p.desativar {
+    display: none;
+}
+
+scroll-container {
+    display: block;
+    height: 60vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    background-color: transparent;
+    width: auto;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #97a5c0 #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #a9b7d3;
+    border-radius: 10px;
+    border: 3px solid white;
+}
+
+input {
+    border-radius: 5px;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: rgba(3, 1, 5, 0.301);
+    height: 20px;
+    outline: 0;
+    background-color: transparent;
+    font-size: 16px;
+    margin-top: 1.5px;
+    width: 100%;
+}
+
+label {
+    font-size: 1.29em;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tr,
+td,
+th {
+    border: 2px black solid;
+    padding: 2px;
+}
+
+th {
+    background-color: rgba(116, 114, 114, 0.315);
+}
+
+tr {
+    border: 2px dashed black;
+}
+
+td {
+    text-align: center;
+}
+
+.btn {
+    background-color: transparent;
+    align-self: center;
+    position: relative;
+    display: block;
+    color: white;
+    font-size: 14px;
+    font-family: "montserrat";
+    text-decoration: none;
+    border: 2px solid var(--botaoColor);
+    padding: 14px 20px;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 1s all ease;
+    cursor: pointer;
+}
+.btn::before {
+    background: var(--botaoColor);
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: all 0.6s ease;
+}
+
+.btn1::before {
+    width: 0%;
+    height: 100%;
+}
+
+.btn1:hover::before {
+    width: 100%;
+}
+
+span{
+    color: red;
+    height: 15px;
+}

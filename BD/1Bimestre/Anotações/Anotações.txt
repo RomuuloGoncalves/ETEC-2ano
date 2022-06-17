@@ -1,0 +1,202 @@
+current_timestamp() -- Ele da a Hora e a data
+
+	|
+	|
+	|
+	V	
+insert into pedido values (0, current_timestamp(),100,4);
+
+ou
+
+direto na tabela
+
+	|
+	|
+	|
+	V
+create table cliente{
+	codigo
+	datahora *timestamp default current_timestamp*,
+	valor decimal(10,2), default 0,
+	cliente int
+}
+
+---------------------------------------------------------------------------------------------------------------
+
+Default(padrão) --  Quando não passamos um parâmetro, ou damos um valor fixo a ele(quando não informamos o valor
+
+	|
+	|
+	|
+	V
+
+crete table cliente{
+ nome 	'  	'	'	'
+ datahora timestamp default current_timestamp
+ cidade varchar(20) default "Tatui"
+ estado char(2) *default* "SP"
+}
+
+----------------------------------------------------------------------------------------------------------------------
+check -- Usado quando a pessoa só pode escolher duas opções
+	|
+	|
+	|
+	V
+
+crete table cliente{
+ nome 	'  	'	'	'
+ sexo char(1) check (sexo = "M" or sexo = "F") -- ou qualquer operador... < > etc...
+ datahora timestamp default current_timestamp
+ cidade varchar(20) default "Tatui"
+ estado char(2) *default* "SP"
+}
+	|
+	|
+	|
+	V
+insert into cliente (nome,sexo) value ("Felipe","m");
+insert into cliente (nome,sexo) value ("Felipe","f");
+
+------------------------------------------------------------------------------------------------------------------------
+select *  from cliente
+where -- aceita tbm o where
+	|
+	|
+	|
+	|
+	V
+
+---   LIKE  ---
+
+select * from cliente
+where nomecli like "Fe%";
+
+(AQUI ELE MOSTRA OS CLIENTES ENTRE UMA PROXIMIDADE DE DADOS, OU SEJA DE CLIENTES COMEÇAM COM AS LETRAS "F" E "E")
+
+select * from cliente
+where nomecli like "%e%" or(ou)/ and(E) nomecli like "%i%";
+
+(AQUI ELE MOSTRA OS CLIENTES ENTRE UMA PROXIMIDADE DE DADOS, OU SEJA DE CLIENTES CONTEM "E")
+
+(PARA ALTERAR TABELAS QUE TENHAM MAIS DE UM VALOR DE CONDIÇÃO PARA SER MUDADO USAMOS OS OPERADORES:
+
+and : E
+or : Ou
+not : Não;
+
+ou se vc quiser algo exato
+
+
+select * from aluno
+where cidade = "Sorocaba" and idadealuno = 30;
+
+--------------------------------------------------------------------------------------------------------------------------
+
+between -- entre
+select count(*) from aluno;
+where idadealuno between 18 and 25;
+
+
+limit -- limita o numero de respostas
+select count(*) from aluno;
+where idadealuno between 18 and 25;
+limit 30;
+
+
+group by -- agrupa de acordo com algo
+select count(*) from aluno;
+where idadealuno between 18 and 25;
+limit 30;
+group by cidade;
+
+
+count(*) -- Quantos cadastros tem nessa tabela
+select count(*) from aluno;
+where idadealuno between 18 and 25;
+limit 30;
+
+
+max --  maior valor
+select max(idadealuno) from aluno;
+where idadealuno between 18 and 25;
+limit 30;
+
+min -- menor valor
+select min(idadealuno) from aluno;
+where idadealuno between 18 and 25;
+limit 30;
+
+avg --  Média de algo(no caso ali das idades)
+select avg(idadealuno) from aluno;
+where idadealuno between 18 and 25;
+limit 30;
+
+sum --  soma
+select sum(idadealuno) from aluno;
+where idadealuno between 18 and 25;
+limit 30;
+
+-- conta quantos alunos tem em cada cidade e ainda mostra quais são as cidades
+select cidade,count(*) from aluno
+group by cidade
+
+
+
+-- conta quantos alunas do sexo feminino tem em cada cidade e ainda mostra quais são as cidades
+select cidade,count(*) from aluno
+where sexaluno = "F"
+group by cidade;
+
+--------------------------------------------------------------------------------------------------------------------------
+
+Função -- join --
+
+inner join = mostra a intercecção de tabelas 
+left join = mostra os dados que estão a esquerda
+right join = mostra os dados que estão a direta
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| sintaxe (duas tabelas): |
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+select atributo1, atributo2, atributo3
+from tabela1 INNER JOIN tabela2
+on chaveprimariatabela1 = chaveestrangeiratabela2
+where ......................
+group by ...................
+having .....................
+order by ...................
+limit ......................;
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| sintaxe (três tabelas): |
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+select atributo1, atributo2, atributo3
+from tabela1 INNER JOIN tabela2 INNER JOIN tabela3
+on chaveprimariatabela1 = chaveestrangeiratabela2
+and chaveprimariatabela2 = chaveestrangeiratabela3
+where ......................
+group by ...................
+having .....................
+order by ...................
+limit ......................;
+
+OBSERVAÇÃO:	 ** DA PARA COLOCAR APELIDOS NAS TABELAS PARA QUE A CONSULTA SEJA MAIS FACIL **
+
+~~ apelidos só é obrigatório para nomes ambiguios
+
+select * from curso c INNER JOIN alunomatriculadocurso amc inner join aluno A
+on c.codcurso = amc.codcurso
+and a.codaluno = amc.codaluno
+where c.nomecurso like "Analise%";
+
+-- --------------------------------------------------
+
+select nomealuno, nomecurso 
+from curso c INNER JOIN alunomatriculadocurso amc inner join aluno A
+on c.codcurso = amc.codcurso
+and a.codaluno = amc.codaluno
+where c.nomecurso like "Analise%";

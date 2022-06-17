@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Funcionário</title>
+		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="stylesheet" href="./css/buttonStyle.css" />
+		<link rel="stylesheet" href="./css/query.css" />
+	</head>
+	<body>
+		<!-- <div class="cont">
+			<img src="./imagens/fundo.jpg" alt="fundo" />
+		</div> -->
+        
+		<div class="glass">
+			<div class="container">
+				<div class="campo">
+					<label for="nome">Nome:</label>
+					<input class="limpar" type="text" id="nome" />
+					<span id="spanNome"></span>
+				</div>
+				
+				<div class="campo">
+					<label for="idade">Data de nascimento:</label>
+					<input class="limpar" type="date" id="idade" />
+					<span id="spanIdade"></span>
+				</div>
+
+				<div class="campo">
+					<label for="cpf">CPF:</label>
+					<input class="limpar" type="text" id="cpf" />
+					<span id="spanCPF"></span>
+				</div>
+
+				<div class="campo">
+					<label for="cargo">Cargo:</label>
+				    <input class="limpar" type="text" id="cargo" />
+					<span id="spanCargo"></span>
+				</div>
+
+				<div class="campo">
+					<label for="salario">Salário:</label>
+					<input class="limpar" type="text" id="salario" />
+					<span id="spanSalario"></span>
+				</div>
+
+				<div class="botao">
+					<!-- <button id="cadastrar" onclick="cadastrar(); toggle()">Cadastrar</button> -->
+					<!-- <button id="mostrar" onclick="mostrar(); toggle()">Mostrar</button> -->
+					<button id="btn">
+						<p id="btnText" onclick="cadastrar()">Cadastrar</p>
+						<div class="check-box">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+								<path fill="transparent" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+							</svg>
+						</div>
+					</button>
+				</div>
+			</div>
+			<p id="cadastro">Realize o cadastro</p>
+			<div id="active">
+				<scroll-container>
+					<scroll-page id="page-1">
+						<table id="mostrar_cadastro">
+							<tr>
+								<th>Nome</th>
+								<th>Idade</th>
+								<th>CPF</th>
+								<th>Cargo</th>
+								<th>Salário</th>
+							</tr>
+						</table>
+					</scroll-page>
+				</scroll-container>
+			</div>
+		</div>
+		<script src="./js/verificaCPF.js"></script>
+		<script src="./js/script.js"></script>
+		<!-- <script type="text/javascript">
+        const btn = document.querySelector("#btn");
+        const btnText = document.querySelector("#btnText");
+
+        btn.onclick = () => {
+            btnText.innerHTML = "Cadastrado";
+            btn.classList.add("active");
+        };
+    </script> -->
+	</body>
+</html>

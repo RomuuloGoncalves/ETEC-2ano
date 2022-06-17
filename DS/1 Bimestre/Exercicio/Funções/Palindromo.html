@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="texto">Insira uma frase</label> <br>
+    <input type="text" id="texto"> <button onclick="palindromo()">verificar</button>
+    <p id="res"></p>
+    <script>
+        function palindromo(){
+            let texto=document.getElementById("texto").value
+            texto = texto.split("")
+            copia =[]
+            quantidade= texto.length 
+            quantidade = quantidade 
+            let a = quantidade -1
+            b=0
+            for(let i = 0; i<quantidade ; i++){
+                copia[i] = texto[a]
+                a--
+            }
+
+            for(let i = 0; i<quantidade; i++){
+                if(copia[i] === texto[i]){
+                    b = b+1
+                }
+            }
+
+            if(b==quantidade){
+                document.getElementById("res").innerHTML = "Sim, é um palindromo"
+            }
+            else{
+                document.getElementById("res").innerHTML = "Não é um palindromo"
+            }
+
+            console.log(copia)
+            console.log(texto)
+        }
+    </script>
+</body>
+</html>

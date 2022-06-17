@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação de formulario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+		<header>
+			<h1>Realize o cadastro</h1>
+		</header>
+		<main>
+			<form action="" class="formulario">
+				<fieldset>
+					<legend style="font-size: 18px;"> Insira os dados do funcionário </legend>
+					<div class="grupo">
+						<label for="nome">Nome</label>
+						<input type="text" id="nome" />
+						<span id="feedback_nome"></span>
+					</div>
+					<div class="grupo">
+						<label for="cpf">CPF</label>
+						<input type="text" id="cpf" />
+						<span id="feedback_cpf"></span>
+					</div>
+					<div class="grupo">
+						<label for="cargo">Cargo</label>
+						<input type="text" id="cargo" />
+						<span id="feedback_cargo"></span>
+
+					</div>
+					<div class="grupo">
+						<label for="Salario">Salário</label>
+						<input type="text" id="salario" />
+						<span id="feedback_salario"></span>
+
+					</div>
+
+					<div class="grupo">
+						<input type="button" value="Cadastrar" onclick="feedback()" id="botao" />
+					</div>
+
+
+				</fieldset>
+			</form>
+
+			<p id="realizado"></p>
+			<p id="cadastro"> </p>
+		</main>
+
+		<footer>
+			<span>
+				<span class="emoji">&#x1F340;</span> Desenvolvido por: Rômulo da Silva
+				Gonçalves <span class="emoji">&#x1F340;</span>
+			</span>
+		</footer>
+
+		<!-- Exemplo cpf: 14538220620 -->
+	</div>
+    <script src="./script.js"></script>
+</body>
+</html>

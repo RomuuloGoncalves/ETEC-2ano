@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Imobiliaria</title>
+        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="./css/buttonStyle.css" />
+        <link rel="stylesheet" href="./css/query.css" />
+    </head>
+    <body>
+        <div class="glass">
+            <div class="container">
+                <h3>Imóvel</h3>
+                <div class="campo">
+                    <label for="">Endereço</label>
+                    <input type="text" id="endereco" />
+                    <span></span>
+                </div>
+
+                <div class="campo">
+                    <label for="">Valor de aluguel</label>
+                    <input type="text" id="vAluguel" />
+                    <span></span>
+                </div>
+
+                <div class="campo">
+                    <label for="">Valor de venda</label>
+                    <input type="text" id="vVenda" />
+                    <span></span>
+                </div>
+
+                <div class="campo">
+                    <label for="">Quantidade de quartos</label>
+                    <input type="text" id="qtdQuarto" />
+                    <span></span>
+                </div>
+
+                <div class="campo">
+                    <label for="">Quantidade de banheiros</label>
+                    <input type="text" id="qtdBanheiro" />
+                    <span></span>
+                </div>
+
+                <h3>Proprietário</h3>
+
+                <div class="campo">
+                    <label for="">Nome</label>
+                    <input type="text" id="nome" />
+                    <span></span>
+                </div>
+
+                <div class="campo">
+                    <label for="">CPF</label>
+                    <input type="text" id="cpf" />
+                    <span></span>
+                </div>
+
+                <div class="campo">
+                    <label for="">Data de nascimento</label>
+                    <input type="date" id="dataNasc" />
+                    <span></span>
+                </div>
+
+                <div class="campo">
+                    <label for="">Endereço</label>
+                    <input type="text" id="enderecoPro" />
+                    <span></span>
+                </div>
+
+                <div class="campo">
+                    <textarea
+                        name=""
+                        id=""
+                        cols="30"
+                        rows="10"
+                        placeholder="Deixe algumas informações sobre o imóvel"
+                        id="geralDesc"
+                    ></textarea>
+                </div>
+
+                <div class="botao">
+                    <!-- <button id="cadastrar" onclick="cadastrar(); toggle()">Cadastrar</button> -->
+                    <!-- <button id="mostrar" onclick="mostrar(); toggle()">Mostrar</button> -->
+                    <button id="btn">
+                        <p id="btnText" onclick="cadastrar()">Cadastrar</p>
+                        <div class="check-box">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 50 50"
+                            >
+                                <path
+                                    fill="transparent"
+                                    d="M14.1 27.2l7.1 7.2 16.7-16.8"
+                                />
+                            </svg>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <p id="cadastro">Realize o cadastro</p>
+            <div id="active">
+                <scroll-container>
+                    <scroll-page id="page-1">
+                        <div id=""></div>
+                        <table id="mostrar_cadastro">
+                            <tr>
+                                <th>Enderço imóvel</th>
+                                <th>Valor de aluguel</th>
+                                <th>Valor de venda</th>
+                                <th>Nome do proprietario</th>
+                                <th>CPF do proprietario</th>
+                                <th>Data de nascimento</th>
+                                <th>Endereço do proprietario</th>
+                            </tr>
+                        </table>
+                    </scroll-page>
+                </scroll-container>
+            </div>
+        </div>
+        <script src="./js/scriptDescente.js"></script>
+    </body>
+</html>

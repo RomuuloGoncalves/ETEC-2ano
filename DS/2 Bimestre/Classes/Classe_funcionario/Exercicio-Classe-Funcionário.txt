@@ -1,0 +1,15 @@
+
+Crie uma classe para representar um funcionário. As instâncias devem ter nome, data de nacimento, cpf, cargo e salário. Ao criar uma nova instancia, devem ser aceitos somente dados válidos de acordo com os seguintes critérios.
+
+
+* O nome não pode ser vazio.
+* A idade não pode ser inferior a 18 anos
+* O cpf de ser um número válido conforme os dígitos verificadores.
+* Os cargos disponíveis são Marceneiro, Ourives, Cuteleiro e Luthier
+* O salário não pode ser inferior ao salário mínimo.
+
+
+
+Crie uma interface para coleta dos dados.
+
+

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Cadastro de sorvete</title>
+		<link rel="stylesheet" href="style.css" />
+		<style>
+			td,
+			tr {
+				border: 2px solid black;
+			}
+		</style>
+	</head>
+
+	<body>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#0099ff" fill-opacity="0.8" d="M0,96L48,80C96,64,192,32,288,26.7C384,21,480,43,576,53.3C672,64,768,64,864,69.3C960,75,1056,85,1152,85.3C1248,85,1344,75,1392,69.3L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+          </svg>
+          
+		<div class="box box_1">
+            <div class="container">
+
+				<div class="campo">
+					<label for="nome">Nome</label>
+					<input type="text" id="nome" />
+				</div>
+
+				<div class="campo">
+					<label for="preco">Preço</label>
+					<input type="text" id="preco" />
+				</div>
+
+				<div class="campo">
+					<label for="sabor">Sabor</label>
+					<input type="text" id="sabor" />
+				</div>
+
+				<div class="campo">
+					<label for="estoque">Estoque</label>
+					<input type="text" id="estoque" />
+				</div>
+
+				<div class="campo">
+					<label for="tipo">Tipo</label>
+					<input type="text" id="tipo" />
+				</div>
+                <div class="botoes">
+
+			<button id="btn-cadastrar" value="Cadastrar" onclick="cadastro(); toggle()"> Cadastar </button>	
+            <button id="btn-resetar" onclick="resetar()">Resetar</button>
+            </div>
+        </div>
+
+
+		</div>
+        <div class="box box_2">
+			<table id="mostrarDados">
+				<tr>
+					<td class="cabeçalho_table">Nome</td>
+					<td class="cabeçalho_table">Preço</td>
+					<td class="cabeçalho_table">Sabor</td>
+					<td class="cabeçalho_table">Estoque</td>
+					<td class="cabeçalho_table">Tipo</td>
+				</tr>
+			</table>
+
+            <h1 id="h1">Realize o cadastro!!!!!!!!!!</h1> 
+        </div>
+
+        <svg id="svg_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="0.8" d="M0,224L120,240C240,256,480,288,720,277.3C960,267,1200,213,1320,186.7L1440,160L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
+        </svg>
+		<script src="./script.js"></script>
+	</body>
+</html>

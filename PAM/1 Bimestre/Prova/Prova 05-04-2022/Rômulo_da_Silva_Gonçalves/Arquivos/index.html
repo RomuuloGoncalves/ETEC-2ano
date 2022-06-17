@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Avaliação Prática de PAM I</title>
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/theme.css" type="text/css">
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+		<div class="container">
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+				data-target="#navbar3SupportedContent" aria-controls="navbar3SupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+			<div class="collapse navbar-collapse text-center justify-content-center" id="navbar3SupportedContent">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="index.html">INÍCIO</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="sobre.html">SOBRE</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="py-3">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="form-group">
+						<h3>Aplicativo - Aposentadoria</h3>
+						<label>Código do Empregado:</label>
+						<input type="text" id="txtcodigo" class="form-control">
+						<label>Ano de nascimento:</label>
+						<input type="text" id="txtanonascimento" class="form-control">
+						<label>Ano de ingresso na empresa:</label>
+						<input type="text" id="txtanoingresso" class="form-control">
+					</div>
+					<button id="btnexercicio" class="btn btn-primary form-control" onclick="aposentadoria()">Verificar</button>
+					<div>
+						<label>Código do Empregado:</label>
+						<input type="text" id="txtresultadocodigo" class="form-control" readonly="true">
+						<label>Idade em Anos:</label>
+						<input type="text" id="txtidade" class="form-control" readonly="true">
+						<label>Tempo de trabalho:</label>
+						<input type="text" id="txttempotrabalho" class="form-control" readonly="true">
+						<label>Situação:</label>
+						<input type="text" id="txtsituacao" class="form-control" readonly="true">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="js/resolucao.js"></script>
+
+</html>

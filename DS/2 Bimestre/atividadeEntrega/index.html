@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Funcionário</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="glass">
+            <div class="container">
+                <div class="campo">
+                    <label for="nome">Nome do computador:</label>
+                    <input class="limpar" type="text" id="nome" />
+                    <span id="spanNome"></span>
+                </div>
+
+                <div class="campo">
+                    <label for="RAM">Quantidade de memória RAM:</label>
+                    <input class="limpar" type="text" id="RAM" />
+                    <span id="spanRAM"></span>
+                </div>
+
+                <div class="campo">
+                    <label for="Armazenamento">Amazenamento disponível (GB):</label>
+                    <input class="limpar" type="text" id="Armazenamento" />
+                    <span id="spanArmazenamento"></span>
+                </div>
+
+                <div class="campo">
+                    <label for="DispositivoArm">Dispositivo de armazenamento</label>
+                    <input class="limpar" type="text" id="DispositivoArm" />
+                    <span id="spanDispositivoArm"></span>
+                </div>
+
+                <div class="campo">
+                    <label for="preco">Preço</label>
+                    <input class="limpar" type="text" id="preco" />
+                    <span id="spanPreco"></span>
+                </div>
+
+                <button class="botao btn btn1" onclick="cadastrar()">Cadastrar</button>
+            </div>
+            <p id="cadastro">Realize o cadastro</p>
+            <div id="active">
+                <scroll-container>
+                    <scroll-page id="page-1">
+                        <table id="mostrar_cadastro">
+                       
+                        </table>
+                    </scroll-page>
+                </scroll-container>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

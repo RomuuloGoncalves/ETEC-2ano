@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ToDo</title>
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+
+    <body>
+        <div class="modal">
+            <div class="formulario">
+                <a href="javascript:fechar()" class="fechar">+</a>
+
+                <div class="campos">
+
+                    <div class="campo">
+                        <label for="titulo">Título</label>
+                        <input type="text" id="titulo" />
+                    </div>
+
+                    <div class="campo">
+                        <label for="data">Limite</label>
+                        <input type="date" id="data" />
+                    </div>
+
+                    <button id="salvar">Adicionar</button>
+                </div>
+
+            </div>
+        </div>
+
+        <header>
+            <span>To Do</span>
+            <a href="javascript:abrir()">Adicionar</a>
+        </header>
+
+        <main>
+            <h1>Próximas tarefas</h1>
+            <div id="proximas-tarefas"></div>
+
+            <h1>Tarefas concluídas</h1>
+            <div id="tarefas-concluidas"></div>
+        </main>
+
+        <footer>
+            <span>Desenvolvido por Rômulo da Silva Gonçalves</span>
+        </footer>
+
+        <script src="./js/script.js"></script>
+    </body>
+</html>
