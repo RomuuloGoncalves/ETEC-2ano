@@ -65,12 +65,13 @@ function atualizar() {
         let html = `
         <li>
         <input type="radio" id="tab${i}" class="rd_tab" name="tabs" >
-        <label for="tab${i}" class="tab_label">Paciente: <i>${paciente.nome}</i> <div class="grupoBotao">
+        <label for="tab${i}" class="tab_label">Prontuário: <i>${paciente.nome}</i> <div class="grupoBotao">
             <button class = "botaoMudar" onclick="colocarEmObservacao(${i})" class="btn btn1">
                 Colocar em observação
             </button></div>   
         </label>
         <div class="tab-content">
+
             <h2>${paciente.nome}</h2>
             <article>
                 <b> Nome: </b>${paciente.nome} <br> <hr>
@@ -98,7 +99,7 @@ function atualizar() {
         let html = `
         <li>
         <input type="radio" id="tabs${i * -1}" class="rd_tab" name="tabs">
-        <label for="tabs${i * -1}" class="tab_label">Paciente: <i>${paciente.nome}</i>  <div class="grupoBotao">
+        <label for="tabs${i * -1}" class="tab_label">Prontuário: <i>${paciente.nome}</i>  <div class="grupoBotao">
             <button class = "botaoMudar" onclick="voltarTratamento(${i * -1})" class="btn btn1">
             voltar para tratamento
             </button>  
@@ -134,7 +135,7 @@ function atualizar() {
         let html = `
         <li>
         <input type="radio" id="tabsc${i}" class="rd_tab" name="tabs" >
-        <label for="tabsc${i}" class="tab_label">Paciente: <i>${paciente.nome}</i> </label>
+        <label for="tabsc${i}" class="tab_label">Prontuário: <i>${paciente.nome}</i> </label>
         <div class="tab-content">
             <h2>${paciente.nome}</h2>
             <article>
@@ -229,10 +230,11 @@ const span = document.querySelectorAll("span");
 const vazio = "Campo vazio";
 var verificacaoVazio = 0;
 function verificarVazio() {
+    verificacaoVazio = 0
     for (let i = 0; i < 11; i++) {
         if (input[i].value === "") {
             input[i].classList.add("erro");
-            input[i].style.borderColor = "red";
+
         } else {
             verificacaoVazio++;
             input[i].classList.remove("erro");

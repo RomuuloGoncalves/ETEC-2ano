@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>instituto de tratamento de contaminados</title>
         <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <script
             type="module"
             src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
@@ -105,13 +106,31 @@
             </button>
         </div>
 
+        <div class="boasVindas animate__animated animate__fadeIn" >
+            <h1>Olá, seja bem-vindo</h1>
+            <div class="dadosPagina">
+                <p>
+                   Ambiente com o objetivo de armazenar fichas médicas de 
+                   pessoas que foram contaminas por alguma substância ou patógeno visando diminuir mortes evitáveis
+                </p>
+                
+                <ul>
+                    <span class="dados">Dados:</span>
+                    <li>Informações sobre o paciente</li>
+                    <li>Detalhers sobre a contaminção</li>
+                    <li>Detalhers sobre o Tratamento</li>
+                    <li>Coleta de dados para ajudar em fututos casos</li>
+                </ul>
+            </div>
+        </div>
+
         <main>
             <div id="Tratamento" class="classificacaoPaciente">
                 <h2>Pacientes em tratamento</h2>
                 <h4>Pacientes contaminados que estão em tratamento:</h4>
                 <nav class="nav_tabs">
                     <ul id="emTratamento">
-                
+          
                     </ul>
                 </nav>
             </div>
@@ -120,9 +139,7 @@
                 <h2>Pacientes em estado de observação</h2>
                 <h4>Pacientes tratados em acompanhamento médico:</h4>
                 <nav class="nav_tabs">
-                    <ul id ="emObservacao">
-
-                    </ul>
+                    <ul id="emObservacao"></ul>
                 </nav>
             </div>
 
@@ -130,15 +147,14 @@
                 <h2>Pacientes curados</h2>
                 <h4>Pacientes 100% curados e sem risco de morte:</h4>
                 <nav class="nav_tabs">
-                    <ul id="curados">
-
-                    </ul>
+                    <ul id="curados"></ul>
                 </nav>
             </div>
         </main>
 
         <footer>
             <span>Desenvolvido por: Rômulo da Silva Gonçalves</span>
+            <span>2º ETIM Desenvolvimento de Sistemas</span>
         </footer>
 
         <script defer src="./js/script.js"></script>

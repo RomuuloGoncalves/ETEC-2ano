@@ -71,9 +71,49 @@ ion-icon {
 
 footer {
     margin-top: auto;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    gap: 5px;
+}
+
+.boasVindas{
+    
+    margin-top: 10px !important;
+    min-height: 35vh;
+    margin: auto;
+    background-color: rgb(140, 207, 140);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 90vw;
+    border-radius: 10px;
+    color: rgb(49, 47, 47);
+    flex-wrap: wrap;
+
+}
+span.dados{
+    margin-left: -15px;
+}
+.boasVindas .dadosPagina{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.boasVindas p{
+    text-align: center;
+    font-size: 20px;
+    border-bottom: 2px solid green;
+    padding: 10px;
+}
+.boasVindas ul{
+    margin-left: 60px;
+}
+.boasVindas ul li{
+    margin: 5px;
 }
 
 #fichaCadastro {
@@ -142,7 +182,6 @@ footer {
     outline: 0;
     width: 100%;
 }
-
 .btn {
     background-color: transparent;
     align-self: center;
@@ -318,6 +357,37 @@ hr{
     body{
         min-height: 120vh;
     }
+
+
+.boasVindas{
+    flex-direction: column;
+
+}
+
+.boasVindas h1{
+    margin-top: 5px;
+
+}
+
+.boasVindas .dadosPagina{
+    width: 100%;
+}
+
+span.dados{
+    margin-left: -15px;
+}
+
+.boasVindas p{
+    margin:auto;
+    text-align: justify;
+    font-size: 20px;
+    border-bottom: 2px solid green;
+    width: 90%;
+}
+.boasVindas ul{
+    margin-left: 40px;
+}
+
 }
 
 @media (max-width: 600px) {
